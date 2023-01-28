@@ -1,0 +1,87 @@
+ThreeSumBenchmark: N=250
+Running ThreeSumQuadratic for 100 runs
+2023-01-28 15:02:45 INFO  TimeLogger - Raw time per run (mSec):  2.00
+2023-01-28 15:02:45 INFO  TimeLogger - Normalized time per run (n^2):  32.00
+Running ThreeSumQuadraticWithCalipers for 100 runs
+2023-01-28 15:02:45 INFO  TimeLogger - Raw time per run (mSec):  1.00
+2023-01-28 15:02:45 INFO  TimeLogger - Normalized time per run (n^2):  16.00
+Running ThreeSumQuadrithmic for 100 runs
+2023-01-28 15:02:45 INFO  TimeLogger - Raw time per run (mSec):  2.00
+2023-01-28 15:02:45 INFO  TimeLogger - Normalized time per run (n^2 log n):  4.02
+Running ThreeSumCubic for 100 runs
+2023-01-28 15:02:46 INFO  TimeLogger - Raw time per run (mSec):  11.00
+2023-01-28 15:02:46 INFO  TimeLogger - Normalized time per run (n^3):  .70
+ThreeSumBenchmark: N=500
+Running ThreeSumQuadratic for 50 runs
+2023-01-28 15:02:46 INFO  TimeLogger - Raw time per run (mSec):  4.00
+2023-01-28 15:02:46 INFO  TimeLogger - Normalized time per run (n^2):  16.00
+Running ThreeSumQuadraticWithCalipers for 50 runs
+2023-01-28 15:02:47 INFO  TimeLogger - Raw time per run (mSec):  2.00
+2023-01-28 15:02:47 INFO  TimeLogger - Normalized time per run (n^2):  8.00
+Running ThreeSumQuadrithmic for 50 runs
+2023-01-28 15:02:47 INFO  TimeLogger - Raw time per run (mSec):  5.00
+2023-01-28 15:02:47 INFO  TimeLogger - Normalized time per run (n^2 log n):  2.23
+Running ThreeSumCubic for 50 runs
+2023-01-28 15:02:50 INFO  TimeLogger - Raw time per run (mSec):  66.00
+2023-01-28 15:02:50 INFO  TimeLogger - Normalized time per run (n^3):  .53
+ThreeSumBenchmark: N=1000
+Running ThreeSumQuadratic for 20 runs
+2023-01-28 15:02:50 INFO  TimeLogger - Raw time per run (mSec):  6.00
+2023-01-28 15:02:50 INFO  TimeLogger - Normalized time per run (n^2):  6.00
+Running ThreeSumQuadraticWithCalipers for 20 runs
+2023-01-28 15:02:50 INFO  TimeLogger - Raw time per run (mSec):  5.00
+2023-01-28 15:02:50 INFO  TimeLogger - Normalized time per run (n^2):  5.00
+Running ThreeSumQuadrithmic for 20 runs
+2023-01-28 15:02:51 INFO  TimeLogger - Raw time per run (mSec):  20.00
+2023-01-28 15:02:51 INFO  TimeLogger - Normalized time per run (n^2 log n):  2.01
+Running ThreeSumCubic for 20 runs
+2023-01-28 15:03:04 INFO  TimeLogger - Raw time per run (mSec):  678.00
+2023-01-28 15:03:04 INFO  TimeLogger - Normalized time per run (n^3):  .68
+ThreeSumBenchmark: N=2000
+Running ThreeSumQuadratic for 10 runs
+2023-01-28 15:03:05 INFO  TimeLogger - Raw time per run (mSec):  26.00
+2023-01-28 15:03:05 INFO  TimeLogger - Normalized time per run (n^2):  6.50
+Running ThreeSumQuadraticWithCalipers for 10 runs
+2023-01-28 15:03:05 INFO  TimeLogger - Raw time per run (mSec):  30.00
+2023-01-28 15:03:05 INFO  TimeLogger - Normalized time per run (n^2):  7.50
+Running ThreeSumQuadrithmic for 10 runs
+2023-01-28 15:03:06 INFO  TimeLogger - Raw time per run (mSec):  89.00
+2023-01-28 15:03:06 INFO  TimeLogger - Normalized time per run (n^2 log n):  2.03
+Running ThreeSumCubic for 10 runs
+2023-01-28 15:03:45 INFO  TimeLogger - Raw time per run (mSec):  3889.00
+2023-01-28 15:03:45 INFO  TimeLogger - Normalized time per run (n^3):  .49
+ThreeSumBenchmark: N=4000
+Running ThreeSumQuadratic for 5 runs
+2023-01-28 15:03:46 INFO  TimeLogger - Raw time per run (mSec):  170.00
+2023-01-28 15:03:46 INFO  TimeLogger - Normalized time per run (n^2):  10.62
+Running ThreeSumQuadraticWithCalipers for 5 runs
+2023-01-28 15:03:47 INFO  TimeLogger - Raw time per run (mSec):  240.00
+2023-01-28 15:03:47 INFO  TimeLogger - Normalized time per run (n^2):  15.00
+Running ThreeSumQuadrithmic for 5 runs
+2023-01-28 15:03:49 INFO  TimeLogger - Raw time per run (mSec):  429.00
+2023-01-28 15:03:49 INFO  TimeLogger - Normalized time per run (n^2 log n):  2.24
+Running ThreeSumCubic for 5 runs
+2023-01-28 15:06:36 INFO  TimeLogger - Raw time per run (mSec):  33411.00
+2023-01-28 15:06:36 INFO  TimeLogger - Normalized time per run (n^3):  .52
+ThreeSumBenchmark: N=8000
+Running ThreeSumQuadratic for 3 runs
+2023-01-28 15:06:38 INFO  TimeLogger - Raw time per run (mSec):  731.00
+2023-01-28 15:06:38 INFO  TimeLogger - Normalized time per run (n^2):  11.42
+Running ThreeSumQuadraticWithCalipers for 3 runs
+2023-01-28 15:06:41 INFO  TimeLogger - Raw time per run (mSec):  855.00
+2023-01-28 15:06:41 INFO  TimeLogger - Normalized time per run (n^2):  13.36
+Running ThreeSumQuadrithmic for 3 runs
+2023-01-28 15:06:46 INFO  TimeLogger - Raw time per run (mSec):  1806.00
+2023-01-28 15:06:46 INFO  TimeLogger - Normalized time per run (n^2 log n):  2.18
+ThreeSumBenchmark: N=16000
+Running ThreeSumQuadratic for 2 runs
+2023-01-28 15:06:52 INFO  TimeLogger - Raw time per run (mSec):  3118.00
+2023-01-28 15:06:52 INFO  TimeLogger - Normalized time per run (n^2):  12.18
+Running ThreeSumQuadraticWithCalipers for 2 runs
+2023-01-28 15:06:59 INFO  TimeLogger - Raw time per run (mSec):  3300.00
+2023-01-28 15:06:59 INFO  TimeLogger - Normalized time per run (n^2):  12.89
+Running ThreeSumQuadrithmic for 2 runs
+2023-01-28 15:07:14 INFO  TimeLogger - Raw time per run (mSec):  7646.00
+2023-01-28 15:07:14 INFO  TimeLogger - Normalized time per run (n^2 log n):  2.14
+
+Process finished with exit code 0

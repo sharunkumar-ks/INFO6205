@@ -18,6 +18,7 @@ public class ThreeSumBenchmark {
     public void runBenchmarks() {
         System.out.println("ThreeSumBenchmark: N=" + n);
         benchmarkThreeSum("ThreeSumQuadratic", (xs) -> new ThreeSumQuadratic(xs).getTriples(), n, timeLoggersQuadratic);
+        benchmarkThreeSum("ThreeSumQuadraticWithCalipers", (xs) -> new ThreeSumQuadraticWithCalipers(xs).getTriples(), n, timeLoggersQuadratic);
         benchmarkThreeSum("ThreeSumQuadrithmic", (xs) -> new ThreeSumQuadrithmic(xs).getTriples(), n, timeLoggersQuadrithmic);
         benchmarkThreeSum("ThreeSumCubic", (xs) -> new ThreeSumCubic(xs).getTriples(), n, timeLoggersCubic);
     }
@@ -34,8 +35,16 @@ public class ThreeSumBenchmark {
 
     private void benchmarkThreeSum(final String description, final Consumer<int[]> function, int n, final TimeLogger[] timeLoggers) {
         if (description.equals("ThreeSumCubic") && n > 4000) return;
-        // FIXME
-        // END 
+        System.out.println("Running " + description + " for " + runs + " runs");
+        var start_time = System.currentTimeMillis();
+        for(int i= 0; i < runs; i++) {
+            function.accept(supplier.get());
+        }
+        var elapsed_time = System.currentTimeMillis() - start_time;
+        var elapsed_time_per_run = elapsed_time / runs;
+        for(var timeLogger: timeLoggers) {
+            timeLogger.log((double) elapsed_time_per_run, n);
+        }
     }
 
     private final static TimeLogger[] timeLoggersCubic = {
