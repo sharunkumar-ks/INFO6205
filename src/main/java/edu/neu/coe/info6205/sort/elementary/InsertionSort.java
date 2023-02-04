@@ -6,7 +6,12 @@ package edu.neu.coe.info6205.sort.elementary;
 import edu.neu.coe.info6205.sort.BaseHelper;
 import edu.neu.coe.info6205.sort.Helper;
 import edu.neu.coe.info6205.sort.SortWithHelper;
+import edu.neu.coe.info6205.util.Benchmark_Timer;
 import edu.neu.coe.info6205.util.Config;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Supplier;
 
 public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
 
@@ -74,5 +79,34 @@ public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
 
     public static <T extends Comparable<T>> void sort(T[] ts) {
         new InsertionSort<T>().mutatingSort(ts);
+    }
+
+    private static <T extends Comparable<T>> T[] sortConsumer(T[] ts) {
+        sort(ts);
+        return ts;
+    }
+
+    public static void main(String[] args) {
+        // run the following benchmarks: measure the running times of this sort, using four different initial array
+        // ordering situations: random, ordered, partially-ordered and reverse-ordered. Use the doubling method for
+        // choosing n and test for at least five values of n
+
+        for(int i = 0, n = 100; i< 5; i++, n*=2){
+            final int n_num = n;
+
+            Map<String,Supplier<Integer[]>> supplierMap = new HashMap<>();
+
+            supplierMap.put("random", () -> Source.randomArray(n_num));
+            supplierMap.put("ordered", () -> Source.orderedArray(n_num));
+            supplierMap.put("partially-ordered", () -> Source.partiallyOrderedArray(n_num));
+            supplierMap.put("reverse-ordered", () -> Source.reverseOrderedArray(n_num));
+
+            Benchmark_Timer<Integer[]> bt = new Benchmark_Timer<>("InsertionSort", InsertionSort::sortConsumer);
+
+            for (Map.Entry<String, Supplier<Integer[]>> entry : supplierMap.entrySet()) {
+                System.out.println("n = " + n_num + ", " + entry.getKey() + " array: " + bt.runFromSupplier(entry.getValue(), 100));
+            }
+        }
+
     }
 }
