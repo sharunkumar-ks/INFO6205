@@ -23,37 +23,49 @@ class Source {
         this(N, M, new Random());
     }
 
-    public Supplier<int[]> intsSupplierRandom() {
-        return () -> {
-            int[] ints = (int[]) Array.newInstance(int.class, n);
-            for (int i = 0; i < ints.length; i++) ints[i] = random.nextInt(m) - m / 2;
-            return ints;
-        };
+    public static Integer[] randomArray(int n) {
+        Random r= new Random();
+        Integer[] array = new Integer[n];
+        for(int i=0;i<n;i++)
+        {
+            array[i]=r.nextInt(n);
+        }
+        return array;
     }
 
-    public Supplier<int[]> intsSupplierOrdered() {
-        return () -> {
-            int[] ints = intsSupplierRandom().get();
-            Arrays.sort(ints);
-            return ints;
-        };
+    public static Integer[] orderedArray(int n) {
+        Integer[] array = new Integer[n];
+        for(int i=0;i<n;i++)
+        {
+            array[i]=i+1;
+        }
+        return array;
     }
 
-    public Supplier<int[]> intsSupplierPartiallyOrdered() {
-        return () -> {
-            int[] ints = intsSupplierOrdered().get();
-            Arrays.sort(ints, 0, ints.length / 2);
-            return ints;
-        };
+    public static Integer[] partiallyOrderedArray(int n) {
+        Random r = new Random();
+        Integer[] array = new Integer[n];
+        for (int i = 0; i < n / 4; i++) {
+            array[i] = i + 1;
+        }
+        for (int i = n / 4; i < n * 3 / 4; i++) {
+            array[i] = r.nextInt(n);
+        }
+        for (int i = n * 3 / 4; i < n; i++) {
+            array[i] = i + 1;
+        }
+        return array;
     }
 
-    public Supplier<int[]> intSupplierReverseOrdered() {
-        return () -> {
-            int[] ints = intSupplierReverseOrdered().get();
-            int[] result = (int[]) Array.newInstance(int.class, n);
-            for (int i = 0; i < n; i++) result[i] = ints[n - i - 1];
-            return result;
-        };
+    public static Integer[] reverseOrderedArray(int n) {
+        Integer[] array = new Integer[n];
+        int count =1;
+        for(int i=0;i<n;i++)
+        {
+            array[i]=n+2-count;
+            count++;
+        }
+        return array;
     }
 
     private final int n;
