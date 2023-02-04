@@ -57,8 +57,8 @@ public class Timer {
     public <T, U> double repeat(int n, Supplier<T> supplier, Function<T, U> function, UnaryOperator<T> preFunction, Consumer<U> postFunction) {
         pause();
         logger.trace("repeat: with " + n + " runs");
-        T currentInput = supplier.get();
         for (int i = 0; i < n; i++) {
+            T currentInput = supplier.get();
             T processedInput = currentInput;
             if (preFunction != null) {
                  processedInput = preFunction.apply(processedInput);
