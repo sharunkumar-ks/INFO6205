@@ -1,0 +1,41 @@
+@sharunkumar-ks ➜ /workspaces/INFO6205 (assignment-3) $  /usr/bin/env /opt/java/11.0.14/bin/java @/tmp/cp_7dxpseci37e5epfbwxchxoebb.argfile edu.neu.coe.info6205.sort.elementary.InsertionSort 
+2023-02-04 23:47:59 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 100, random array: 1.9181431599999998
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 100, ordered array: 0.6792925
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 100, partially-ordered array: 0.55028003
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 100, reverse-ordered array: 0.42682969
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 200, random array: 0.45773708999999996
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 200, ordered array: 0.30238335
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 200, partially-ordered array: 0.26776197
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 200, reverse-ordered array: 0.48624733
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 400, random array: 1.1448921699999999
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 400, ordered array: 0.30629327
+2023-02-04 23:48:00 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 400, partially-ordered array: 0.66460408
+2023-02-04 23:48:01 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 400, reverse-ordered array: 1.1800054199999999
+2023-02-04 23:48:01 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 800, random array: 3.1232432
+2023-02-04 23:48:01 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 800, ordered array: 0.1483446
+2023-02-04 23:48:01 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 800, partially-ordered array: 0.90409163
+2023-02-04 23:48:01 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 800, reverse-ordered array: 3.6041472800000003
+2023-02-04 23:48:02 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 1600, random array: 6.179770680000001
+2023-02-04 23:48:02 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 1600, ordered array: 0.13090539
+2023-02-04 23:48:02 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 1600, partially-ordered array: 2.88399354
+2023-02-04 23:48:03 INFO  Benchmark_Timer - Begin run: InsertionSort with 100 runs
+n = 1600, reverse-ordered array: 8.17498181
