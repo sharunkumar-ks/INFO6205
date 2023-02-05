@@ -90,6 +90,7 @@ public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
 
         final int start_n = 100;
         final int number_of_tests = 10;
+        final int number_of_runs_per_test = 10;
 
         for (int i = 0, n = start_n; i < number_of_tests; i++, n *= 2) {
             final int n_num = n;
@@ -104,7 +105,7 @@ public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
             Benchmark_Timer<Integer[]> bt = new Benchmark_Timer<>("InsertionSort", InsertionSort::sortConsumer);
 
             for (Map.Entry<String, Supplier<Integer[]>> entry : supplierMap.entrySet()) {
-                System.out.println("n = " + n_num + ", " + entry.getKey() + " array: " + bt.runFromSupplier(entry.getValue(), 100));
+                System.out.println("n = " + n_num + ", " + entry.getKey() + " array: " + bt.runFromSupplier(entry.getValue(), number_of_runs_per_test));
             }
         }
 
