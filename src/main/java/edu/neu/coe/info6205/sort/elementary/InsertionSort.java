@@ -87,14 +87,14 @@ public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
     }
 
     public static void main(String[] args) {
-        // run the following benchmarks: measure the running times of this sort, using four different initial array
-        // ordering situations: random, ordered, partially-ordered and reverse-ordered. Use the doubling method for
-        // choosing n and test for at least five values of n
 
-        for(int i = 0, n = 100; i< 5; i++, n*=2){
+        final int start_n = 100;
+        final int number_of_tests = 5;
+
+        for (int i = 0, n = start_n; i < number_of_tests; i++, n *= 2) {
             final int n_num = n;
 
-            Map<String,Supplier<Integer[]>> supplierMap = new HashMap<>();
+            Map<String, Supplier<Integer[]>> supplierMap = new HashMap<>();
 
             supplierMap.put("random", () -> Source.randomArray(n_num));
             supplierMap.put("ordered", () -> Source.orderedArray(n_num));
