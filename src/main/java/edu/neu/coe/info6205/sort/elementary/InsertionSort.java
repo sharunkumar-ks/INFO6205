@@ -89,7 +89,7 @@ public class InsertionSort<X extends Comparable<X>> extends SortWithHelper<X> {
     public static void main(String[] args) {
 
         final int start_n = 100;
-        final int number_of_tests = 5;
+        final int number_of_tests = 10;
 
         for (int i = 0, n = start_n; i < number_of_tests; i++, n *= 2) {
             final int n_num = n;
