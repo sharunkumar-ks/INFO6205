@@ -1,0 +1,80 @@
+Running random walks for m = 82
+The drunkard is at (-7,-9) after 82 steps, distance = 11.40175425099138
+The drunkard is at (1,1) after 82 steps, distance = 1.4142135623730951
+The drunkard is at (4,-4) after 82 steps, distance = 5.656854249492381
+The drunkard is at (1,-1) after 82 steps, distance = 1.4142135623730951
+The drunkard is at (5,-5) after 82 steps, distance = 7.0710678118654755
+The drunkard is at (-6,0) after 82 steps, distance = 6.0
+The drunkard is at (-1,-7) after 82 steps, distance = 7.0710678118654755
+The drunkard is at (-2,0) after 82 steps, distance = 2.0
+The drunkard is at (0,2) after 82 steps, distance = 2.0
+The drunkard is at (4,4) after 82 steps, distance = 5.656854249492381
+Mean distance for m = 82 is 4.968602549845329
+
+Running random walks for m = 63
+The drunkard is at (3,-2) after 63 steps, distance = 3.605551275463989
+The drunkard is at (18,5) after 63 steps, distance = 18.681541692269406
+The drunkard is at (-3,-10) after 63 steps, distance = 10.44030650891055
+The drunkard is at (9,2) after 63 steps, distance = 9.219544457292887
+The drunkard is at (9,0) after 63 steps, distance = 9.0
+The drunkard is at (-2,1) after 63 steps, distance = 2.23606797749979
+The drunkard is at (0,-7) after 63 steps, distance = 7.0
+The drunkard is at (-6,1) after 63 steps, distance = 6.082762530298219
+The drunkard is at (-2,5) after 63 steps, distance = 5.385164807134504
+The drunkard is at (2,-3) after 63 steps, distance = 3.605551275463989
+Mean distance for m = 63 is 7.525649052433335
+
+Running random walks for m = 78
+The drunkard is at (-2,-6) after 78 steps, distance = 6.324555320336759
+The drunkard is at (9,-5) after 78 steps, distance = 10.295630140987
+The drunkard is at (-9,-3) after 78 steps, distance = 9.486832980505138
+The drunkard is at (-2,-12) after 78 steps, distance = 12.165525060596439
+The drunkard is at (8,8) after 78 steps, distance = 11.313708498984761
+The drunkard is at (2,-8) after 78 steps, distance = 8.246211251235321
+The drunkard is at (3,-9) after 78 steps, distance = 9.486832980505138
+The drunkard is at (1,9) after 78 steps, distance = 9.055385138137417
+The drunkard is at (4,0) after 78 steps, distance = 4.0
+The drunkard is at (1,-1) after 78 steps, distance = 1.4142135623730951
+Mean distance for m = 78 is 8.178889493366107
+
+Running random walks for m = 50
+The drunkard is at (2,-4) after 50 steps, distance = 4.47213595499958
+The drunkard is at (-3,-5) after 50 steps, distance = 5.830951894845301
+The drunkard is at (2,-2) after 50 steps, distance = 2.8284271247461903
+The drunkard is at (7,-7) after 50 steps, distance = 9.899494936611665
+The drunkard is at (4,2) after 50 steps, distance = 4.47213595499958
+The drunkard is at (-4,-2) after 50 steps, distance = 4.47213595499958
+The drunkard is at (0,0) after 50 steps, distance = 0.0
+The drunkard is at (-4,6) after 50 steps, distance = 7.211102550927978
+The drunkard is at (8,0) after 50 steps, distance = 8.0
+The drunkard is at (-4,6) after 50 steps, distance = 7.211102550927978
+Mean distance for m = 50 is 5.439748692305785
+
+Running random walks for m = 67
+The drunkard is at (5,-4) after 67 steps, distance = 6.4031242374328485
+The drunkard is at (7,2) after 67 steps, distance = 7.280109889280518
+The drunkard is at (1,0) after 67 steps, distance = 1.0
+The drunkard is at (-1,8) after 67 steps, distance = 8.06225774829855
+The drunkard is at (2,-1) after 67 steps, distance = 2.23606797749979
+The drunkard is at (1,0) after 67 steps, distance = 1.0
+The drunkard is at (-1,6) after 67 steps, distance = 6.082762530298219
+The drunkard is at (5,12) after 67 steps, distance = 13.0
+The drunkard is at (-6,5) after 67 steps, distance = 7.810249675906654
+The drunkard is at (6,9) after 67 steps, distance = 10.816653826391969
+Mean distance for m = 67 is 6.369122588510855
+
+Running random walks for m = 55
+The drunkard is at (-7,2) after 55 steps, distance = 7.280109889280518
+The drunkard is at (0,15) after 55 steps, distance = 15.0
+The drunkard is at (14,-1) after 55 steps, distance = 14.035668847618199
+The drunkard is at (-7,-8) after 55 steps, distance = 10.63014581273465
+The drunkard is at (5,6) after 55 steps, distance = 7.810249675906654
+The drunkard is at (-3,6) after 55 steps, distance = 6.708203932499369
+The drunkard is at (5,4) after 55 steps, distance = 6.4031242374328485
+The drunkard is at (-7,4) after 55 steps, distance = 8.06225774829855
+The drunkard is at (-2,-1) after 55 steps, distance = 2.23606797749979
+The drunkard is at (4,7) after 55 steps, distance = 8.06225774829855
+Mean distance for m = 55 is 8.62280858695691
+
+
+Process finished with exit code 0

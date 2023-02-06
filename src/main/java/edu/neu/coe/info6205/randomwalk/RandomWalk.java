@@ -20,9 +20,8 @@ public class RandomWalk {
      * @param dy the distance he moves in the y direction
      */
     private void move(int dx, int dy) {
-        // FIXME do move by replacing the following code
-         throw new RuntimeException("Not implemented");
-        // END 
+        x = x + dx;
+        y = y + dy;
     }
 
     /**
@@ -31,8 +30,27 @@ public class RandomWalk {
      * @param m the number of steps the drunkard takes
      */
     private void randomWalk(int m) {
-        // FIXME
-        // END 
+        // can either move north, south, east or west randomly
+        for (int i = 0; i < m; i++) {
+            int dx = 0;
+            int dy = 0;
+            switch (random.nextInt(4)) {
+                case 0:
+                    dx = 1;
+                    break;
+                case 1:
+                    dx = -1;
+                    break;
+                case 2:
+                    dy = 1;
+                    break;
+                case 3:
+                    dy = -1;
+                    break;
+            }
+            move(dx, dy);
+        }
+        System.out.println("The drunkard is at (" + x + "," + y + ") after " + m + " steps, distance = " + distance());
     }
 
     /**
@@ -51,9 +69,8 @@ public class RandomWalk {
      * @return the (Euclidean) distance from the origin to the current position.
      */
     public double distance() {
-        // FIXME by replacing the following code
-         return 0.0;
-        // END 
+        // return the euclidian distance
+        return Math.sqrt(x*x+y*y);
     }
 
     /**
@@ -74,13 +91,18 @@ public class RandomWalk {
     }
 
     public static void main(String[] args) {
-        if (args.length == 0)
-            throw new RuntimeException("Syntax: RandomWalk steps [experiments]");
-        int m = Integer.parseInt(args[0]);
-        int n = 30;
-        if (args.length > 1) n = Integer.parseInt(args[1]);
-        double meanDistance = randomWalkMulti(m, n);
-        System.out.println(m + " steps: " + meanDistance + " over " + n + " experiments");
+
+        // final program: large data set
+        // m: 10 -> 100
+        // 100 steps each
+        for (int m = 10; m <= 100; m++) {
+
+            System.out.println("Running random walks for m = " + m);
+
+            var meanDistance = randomWalkMulti(m, 100);
+
+            System.out.println("Mean distance for m = " + m + " is " + meanDistance + "\n");
+        }
     }
 
 }
