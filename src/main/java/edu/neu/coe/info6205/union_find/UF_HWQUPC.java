@@ -8,6 +8,7 @@
 package edu.neu.coe.info6205.union_find;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Height-weighted Quick Union with Path Compression
@@ -192,6 +193,33 @@ public class UF_HWQUPC implements UF {
         if (i != getParent(i)) {
             updateParent(i, getParent(getParent(i)));
             doPathCompression(getParent(i));
+        }
+    }
+
+    public static void main(String[] args) {
+        // Generate from n = 10, using doubling, for 10 doubles
+        int n = 10;
+        int samples_count = 15;
+        int number_of_trials = 10;
+        Random random = new Random(69420);
+
+        for (int i = 0; i < samples_count; i++, n*= 2) {
+            int total_pairs = 0;
+            for(int j = 0; j < number_of_trials; j++) {
+                int number_of_pairs = 0;
+                UF_HWQUPC uf = new UF_HWQUPC(n);
+                while (uf.components() > 1) {
+                    int p = random.nextInt(n);
+                    int q = random.nextInt(n);
+                    if(!uf.connected(p, q)) {
+                        uf.union(p, q);
+                    }
+                    number_of_pairs++;
+                }
+                total_pairs += number_of_pairs;
+            }
+            int average_pairs = total_pairs / number_of_trials;
+            System.out.println("for n = " + n + ", average no. of random pairs needed for singularity = " + average_pairs + "");
         }
     }
 }
