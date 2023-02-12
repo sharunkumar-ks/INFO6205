@@ -8,6 +8,7 @@
 package edu.neu.coe.info6205.union_find;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Height-weighted Quick Union with Path Compression
@@ -81,8 +82,12 @@ public class UF_HWQUPC implements UF {
     public int find(int p) {
         validate(p);
         int root = p;
-        // FIXME
-        // END 
+        while (root != getParent(root)) {
+            root = getParent(root);
+        }
+        if (pathCompression) {
+            doPathCompression(p);
+        }
         return root;
     }
 
@@ -169,15 +174,52 @@ public class UF_HWQUPC implements UF {
     private boolean pathCompression;
 
     private void mergeComponents(int i, int j) {
-        // FIXME make shorter root point to taller one
-        // END 
+        int rootI = find(i);
+        int rootJ = find(j);
+        if (rootI == rootJ) return;
+        if (height[rootI] < height[rootJ]) {
+            updateParent(rootI, rootJ);
+            updateHeight(rootJ, rootI);
+        } else {
+            updateParent(rootJ, rootI);
+            updateHeight(rootI, rootJ);
+        }
     }
 
     /**
      * This implements the single-pass path-halving mechanism of path compression
      */
     private void doPathCompression(int i) {
-        // FIXME update parent to value of grandparent
-        // END 
+        if (i != getParent(i)) {
+            updateParent(i, getParent(getParent(i)));
+            doPathCompression(getParent(i));
+        }
+    }
+
+    public static void main(String[] args) {
+        // Generate from n = 10, using doubling, for 10 doubles
+        int n = 10;
+        int samples_count = 15;
+        int number_of_trials = 10;
+        Random random = new Random(69420);
+
+        for (int i = 0; i < samples_count; i++, n*= 2) {
+            int total_pairs = 0;
+            for(int j = 0; j < number_of_trials; j++) {
+                int number_of_pairs = 0;
+                UF_HWQUPC uf = new UF_HWQUPC(n);
+                while (uf.components() > 1) {
+                    int p = random.nextInt(n);
+                    int q = random.nextInt(n);
+                    if(!uf.connected(p, q)) {
+                        uf.union(p, q);
+                    }
+                    number_of_pairs++;
+                }
+                total_pairs += number_of_pairs;
+            }
+            int average_pairs = total_pairs / number_of_trials;
+            System.out.println("for n = " + n + ", average no. of random pairs needed for singularity = " + average_pairs + "");
+        }
     }
 }

@@ -1,0 +1,17 @@
+for n = 10, average no. of random pairs needed for singularity = 17
+for n = 20, average no. of random pairs needed for singularity = 42
+for n = 40, average no. of random pairs needed for singularity = 89
+for n = 80, average no. of random pairs needed for singularity = 217
+for n = 160, average no. of random pairs needed for singularity = 483
+for n = 320, average no. of random pairs needed for singularity = 936
+for n = 640, average no. of random pairs needed for singularity = 2218
+for n = 1280, average no. of random pairs needed for singularity = 5022
+for n = 2560, average no. of random pairs needed for singularity = 10283
+for n = 5120, average no. of random pairs needed for singularity = 21754
+for n = 10240, average no. of random pairs needed for singularity = 49623
+for n = 20480, average no. of random pairs needed for singularity = 105529
+for n = 40960, average no. of random pairs needed for singularity = 225799
+for n = 81920, average no. of random pairs needed for singularity = 454848
+for n = 163840, average no. of random pairs needed for singularity = 1052908
+
+Process finished with exit code 0
