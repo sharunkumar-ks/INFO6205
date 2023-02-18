@@ -1,0 +1,443 @@
+Machine has 8 available processors.
+Array size: 500000		Threads: 1
+cutoff-ratio：0.05		10times Time:675ms
+cutoff-ratio：0.15		10times Time:568ms
+cutoff-ratio：0.25		10times Time:429ms
+cutoff-ratio：0.35		10times Time:378ms
+cutoff-ratio：0.45		10times Time:386ms
+cutoff-ratio：0.55		10times Time:401ms
+cutoff-ratio：0.65		10times Time:401ms
+cutoff-ratio：0.75		10times Time:398ms
+cutoff-ratio：0.85		10times Time:389ms
+cutoff-ratio：0.95		10times Time:453ms
+Array size: 1000000		Threads: 1
+cutoff-ratio：0.05		10times Time:613ms
+cutoff-ratio：0.15		10times Time:783ms
+cutoff-ratio：0.25		10times Time:769ms
+cutoff-ratio：0.35		10times Time:777ms
+cutoff-ratio：0.45		10times Time:870ms
+cutoff-ratio：0.55		10times Time:902ms
+cutoff-ratio：0.65		10times Time:957ms
+cutoff-ratio：0.75		10times Time:921ms
+cutoff-ratio：0.85		10times Time:1267ms
+cutoff-ratio：0.95		10times Time:859ms
+Array size: 2000000		Threads: 1
+cutoff-ratio：0.05		10times Time:1491ms
+cutoff-ratio：0.15		10times Time:1844ms
+cutoff-ratio：0.25		10times Time:1778ms
+cutoff-ratio：0.35		10times Time:2056ms
+cutoff-ratio：0.45		10times Time:2121ms
+cutoff-ratio：0.55		10times Time:1975ms
+cutoff-ratio：0.65		10times Time:1804ms
+cutoff-ratio：0.75		10times Time:1855ms
+cutoff-ratio：0.85		10times Time:1850ms
+cutoff-ratio：0.95		10times Time:1823ms
+Array size: 4000000		Threads: 1
+cutoff-ratio：0.05		10times Time:2978ms
+cutoff-ratio：0.15		10times Time:3331ms
+cutoff-ratio：0.25		10times Time:3403ms
+cutoff-ratio：0.35		10times Time:3340ms
+cutoff-ratio：0.45		10times Time:3374ms
+cutoff-ratio：0.55		10times Time:3642ms
+cutoff-ratio：0.65		10times Time:3717ms
+cutoff-ratio：0.75		10times Time:3702ms
+cutoff-ratio：0.85		10times Time:4188ms
+cutoff-ratio：0.95		10times Time:5153ms
+Array size: 8000000		Threads: 1
+cutoff-ratio：0.05		10times Time:8448ms
+cutoff-ratio：0.15		10times Time:6983ms
+cutoff-ratio：0.25		10times Time:7857ms
+cutoff-ratio：0.35		10times Time:11321ms
+cutoff-ratio：0.45		10times Time:7978ms
+cutoff-ratio：0.55		10times Time:8875ms
+cutoff-ratio：0.65		10times Time:8044ms
+cutoff-ratio：0.75		10times Time:7814ms
+cutoff-ratio：0.85		10times Time:8830ms
+cutoff-ratio：0.95		10times Time:8231ms
+Array size: 500000		Threads: 2
+cutoff-ratio：0.05		10times Time:335ms
+cutoff-ratio：0.15		10times Time:321ms
+cutoff-ratio：0.25		10times Time:326ms
+cutoff-ratio：0.35		10times Time:393ms
+cutoff-ratio：0.45		10times Time:390ms
+cutoff-ratio：0.55		10times Time:285ms
+cutoff-ratio：0.65		10times Time:291ms
+cutoff-ratio：0.75		10times Time:284ms
+cutoff-ratio：0.85		10times Time:330ms
+cutoff-ratio：0.95		10times Time:317ms
+Array size: 1000000		Threads: 2
+cutoff-ratio：0.05		10times Time:668ms
+cutoff-ratio：0.15		10times Time:955ms
+cutoff-ratio：0.25		10times Time:968ms
+cutoff-ratio：0.35		10times Time:888ms
+cutoff-ratio：0.45		10times Time:830ms
+cutoff-ratio：0.55		10times Time:648ms
+cutoff-ratio：0.65		10times Time:703ms
+cutoff-ratio：0.75		10times Time:650ms
+cutoff-ratio：0.85		10times Time:794ms
+cutoff-ratio：0.95		10times Time:676ms
+Array size: 2000000		Threads: 2
+cutoff-ratio：0.05		10times Time:1335ms
+cutoff-ratio：0.15		10times Time:1791ms
+cutoff-ratio：0.25		10times Time:1384ms
+cutoff-ratio：0.35		10times Time:1752ms
+cutoff-ratio：0.45		10times Time:1641ms
+cutoff-ratio：0.55		10times Time:1339ms
+cutoff-ratio：0.65		10times Time:1338ms
+cutoff-ratio：0.75		10times Time:1328ms
+cutoff-ratio：0.85		10times Time:1221ms
+cutoff-ratio：0.95		10times Time:1134ms
+Array size: 4000000		Threads: 2
+cutoff-ratio：0.05		10times Time:2406ms
+cutoff-ratio：0.15		10times Time:2790ms
+cutoff-ratio：0.25		10times Time:3958ms
+cutoff-ratio：0.35		10times Time:3542ms
+cutoff-ratio：0.45		10times Time:3425ms
+cutoff-ratio：0.55		10times Time:2498ms
+cutoff-ratio：0.65		10times Time:2960ms
+cutoff-ratio：0.75		10times Time:2799ms
+cutoff-ratio：0.85		10times Time:2612ms
+cutoff-ratio：0.95		10times Time:2450ms
+Array size: 8000000		Threads: 2
+cutoff-ratio：0.05		10times Time:5162ms
+cutoff-ratio：0.15		10times Time:6011ms
+cutoff-ratio：0.25		10times Time:8373ms
+cutoff-ratio：0.35		10times Time:6899ms
+cutoff-ratio：0.45		10times Time:7602ms
+cutoff-ratio：0.55		10times Time:5320ms
+cutoff-ratio：0.65		10times Time:5728ms
+cutoff-ratio：0.75		10times Time:4971ms
+cutoff-ratio：0.85		10times Time:5302ms
+cutoff-ratio：0.95		10times Time:5078ms
+Array size: 500000		Threads: 3
+cutoff-ratio：0.05		10times Time:315ms
+cutoff-ratio：0.15		10times Time:385ms
+cutoff-ratio：0.25		10times Time:378ms
+cutoff-ratio：0.35		10times Time:374ms
+cutoff-ratio：0.45		10times Time:366ms
+cutoff-ratio：0.55		10times Time:296ms
+cutoff-ratio：0.65		10times Time:279ms
+cutoff-ratio：0.75		10times Time:297ms
+cutoff-ratio：0.85		10times Time:291ms
+cutoff-ratio：0.95		10times Time:261ms
+Array size: 1000000		Threads: 3
+cutoff-ratio：0.05		10times Time:553ms
+cutoff-ratio：0.15		10times Time:668ms
+cutoff-ratio：0.25		10times Time:692ms
+cutoff-ratio：0.35		10times Time:761ms
+cutoff-ratio：0.45		10times Time:816ms
+cutoff-ratio：0.55		10times Time:590ms
+cutoff-ratio：0.65		10times Time:582ms
+cutoff-ratio：0.75		10times Time:594ms
+cutoff-ratio：0.85		10times Time:592ms
+cutoff-ratio：0.95		10times Time:540ms
+Array size: 2000000		Threads: 3
+cutoff-ratio：0.05		10times Time:1113ms
+cutoff-ratio：0.15		10times Time:1408ms
+cutoff-ratio：0.25		10times Time:1322ms
+cutoff-ratio：0.35		10times Time:1558ms
+cutoff-ratio：0.45		10times Time:1586ms
+cutoff-ratio：0.55		10times Time:1227ms
+cutoff-ratio：0.65		10times Time:1242ms
+cutoff-ratio：0.75		10times Time:1162ms
+cutoff-ratio：0.85		10times Time:1218ms
+cutoff-ratio：0.95		10times Time:1238ms
+Array size: 4000000		Threads: 3
+cutoff-ratio：0.05		10times Time:2358ms
+cutoff-ratio：0.15		10times Time:3257ms
+cutoff-ratio：0.25		10times Time:3173ms
+cutoff-ratio：0.35		10times Time:3528ms
+cutoff-ratio：0.45		10times Time:3276ms
+cutoff-ratio：0.55		10times Time:2636ms
+cutoff-ratio：0.65		10times Time:2497ms
+cutoff-ratio：0.75		10times Time:3062ms
+cutoff-ratio：0.85		10times Time:2740ms
+cutoff-ratio：0.95		10times Time:2622ms
+Array size: 8000000		Threads: 3
+cutoff-ratio：0.05		10times Time:5412ms
+cutoff-ratio：0.15		10times Time:6575ms
+cutoff-ratio：0.25		10times Time:6258ms
+cutoff-ratio：0.35		10times Time:7188ms
+cutoff-ratio：0.45		10times Time:6914ms
+cutoff-ratio：0.55		10times Time:5074ms
+cutoff-ratio：0.65		10times Time:5114ms
+cutoff-ratio：0.75		10times Time:5679ms
+cutoff-ratio：0.85		10times Time:5206ms
+cutoff-ratio：0.95		10times Time:5030ms
+Array size: 500000		Threads: 4
+cutoff-ratio：0.05		10times Time:245ms
+cutoff-ratio：0.15		10times Time:338ms
+cutoff-ratio：0.25		10times Time:314ms
+cutoff-ratio：0.35		10times Time:254ms
+cutoff-ratio：0.45		10times Time:257ms
+cutoff-ratio：0.55		10times Time:266ms
+cutoff-ratio：0.65		10times Time:265ms
+cutoff-ratio：0.75		10times Time:256ms
+cutoff-ratio：0.85		10times Time:287ms
+cutoff-ratio：0.95		10times Time:260ms
+Array size: 1000000		Threads: 4
+cutoff-ratio：0.05		10times Time:477ms
+cutoff-ratio：0.15		10times Time:685ms
+cutoff-ratio：0.25		10times Time:1150ms
+cutoff-ratio：0.35		10times Time:736ms
+cutoff-ratio：0.45		10times Time:666ms
+cutoff-ratio：0.55		10times Time:646ms
+cutoff-ratio：0.65		10times Time:576ms
+cutoff-ratio：0.75		10times Time:545ms
+cutoff-ratio：0.85		10times Time:549ms
+cutoff-ratio：0.95		10times Time:513ms
+Array size: 2000000		Threads: 4
+cutoff-ratio：0.05		10times Time:1081ms
+cutoff-ratio：0.15		10times Time:1390ms
+cutoff-ratio：0.25		10times Time:1442ms
+cutoff-ratio：0.35		10times Time:1193ms
+cutoff-ratio：0.45		10times Time:1217ms
+cutoff-ratio：0.55		10times Time:1203ms
+cutoff-ratio：0.65		10times Time:1153ms
+cutoff-ratio：0.75		10times Time:1133ms
+cutoff-ratio：0.85		10times Time:1125ms
+cutoff-ratio：0.95		10times Time:1164ms
+Array size: 4000000		Threads: 4
+cutoff-ratio：0.05		10times Time:2215ms
+cutoff-ratio：0.15		10times Time:3373ms
+cutoff-ratio：0.25		10times Time:2735ms
+cutoff-ratio：0.35		10times Time:3965ms
+cutoff-ratio：0.45		10times Time:2498ms
+cutoff-ratio：0.55		10times Time:2458ms
+cutoff-ratio：0.65		10times Time:2354ms
+cutoff-ratio：0.75		10times Time:2410ms
+cutoff-ratio：0.85		10times Time:2304ms
+cutoff-ratio：0.95		10times Time:2381ms
+Array size: 8000000		Threads: 4
+cutoff-ratio：0.05		10times Time:5045ms
+cutoff-ratio：0.15		10times Time:5928ms
+cutoff-ratio：0.25		10times Time:5886ms
+cutoff-ratio：0.35		10times Time:5812ms
+cutoff-ratio：0.45		10times Time:5642ms
+cutoff-ratio：0.55		10times Time:5782ms
+cutoff-ratio：0.65		10times Time:5896ms
+cutoff-ratio：0.75		10times Time:5143ms
+cutoff-ratio：0.85		10times Time:5028ms
+cutoff-ratio：0.95		10times Time:5100ms
+Array size: 500000		Threads: 5
+cutoff-ratio：0.05		10times Time:264ms
+cutoff-ratio：0.15		10times Time:309ms
+cutoff-ratio：0.25		10times Time:304ms
+cutoff-ratio：0.35		10times Time:256ms
+cutoff-ratio：0.45		10times Time:286ms
+cutoff-ratio：0.55		10times Time:261ms
+cutoff-ratio：0.65		10times Time:260ms
+cutoff-ratio：0.75		10times Time:269ms
+cutoff-ratio：0.85		10times Time:284ms
+cutoff-ratio：0.95		10times Time:264ms
+Array size: 1000000		Threads: 5
+cutoff-ratio：0.05		10times Time:519ms
+cutoff-ratio：0.15		10times Time:651ms
+cutoff-ratio：0.25		10times Time:699ms
+cutoff-ratio：0.35		10times Time:569ms
+cutoff-ratio：0.45		10times Time:543ms
+cutoff-ratio：0.55		10times Time:577ms
+cutoff-ratio：0.65		10times Time:702ms
+cutoff-ratio：0.75		10times Time:1185ms
+cutoff-ratio：0.85		10times Time:1092ms
+cutoff-ratio：0.95		10times Time:890ms
+Array size: 2000000		Threads: 5
+cutoff-ratio：0.05		10times Time:1549ms
+cutoff-ratio：0.15		10times Time:1921ms
+cutoff-ratio：0.25		10times Time:1613ms
+cutoff-ratio：0.35		10times Time:1352ms
+cutoff-ratio：0.45		10times Time:1262ms
+cutoff-ratio：0.55		10times Time:1187ms
+cutoff-ratio：0.65		10times Time:1176ms
+cutoff-ratio：0.75		10times Time:1154ms
+cutoff-ratio：0.85		10times Time:1319ms
+cutoff-ratio：0.95		10times Time:1323ms
+Array size: 4000000		Threads: 5
+cutoff-ratio：0.05		10times Time:2590ms
+cutoff-ratio：0.15		10times Time:3090ms
+cutoff-ratio：0.25		10times Time:2851ms
+cutoff-ratio：0.35		10times Time:2440ms
+cutoff-ratio：0.45		10times Time:2496ms
+cutoff-ratio：0.55		10times Time:2399ms
+cutoff-ratio：0.65		10times Time:2357ms
+cutoff-ratio：0.75		10times Time:2549ms
+cutoff-ratio：0.85		10times Time:2733ms
+cutoff-ratio：0.95		10times Time:2436ms
+Array size: 8000000		Threads: 5
+cutoff-ratio：0.05		10times Time:5113ms
+cutoff-ratio：0.15		10times Time:6005ms
+cutoff-ratio：0.25		10times Time:6224ms
+cutoff-ratio：0.35		10times Time:5094ms
+cutoff-ratio：0.45		10times Time:5461ms
+cutoff-ratio：0.55		10times Time:5081ms
+cutoff-ratio：0.65		10times Time:5805ms
+cutoff-ratio：0.75		10times Time:5160ms
+cutoff-ratio：0.85		10times Time:5112ms
+cutoff-ratio：0.95		10times Time:5082ms
+Array size: 500000		Threads: 6
+cutoff-ratio：0.05		10times Time:252ms
+cutoff-ratio：0.15		10times Time:309ms
+cutoff-ratio：0.25		10times Time:302ms
+cutoff-ratio：0.35		10times Time:231ms
+cutoff-ratio：0.45		10times Time:240ms
+cutoff-ratio：0.55		10times Time:268ms
+cutoff-ratio：0.65		10times Time:290ms
+cutoff-ratio：0.75		10times Time:284ms
+cutoff-ratio：0.85		10times Time:272ms
+cutoff-ratio：0.95		10times Time:264ms
+Array size: 1000000		Threads: 6
+cutoff-ratio：0.05		10times Time:559ms
+cutoff-ratio：0.15		10times Time:678ms
+cutoff-ratio：0.25		10times Time:679ms
+cutoff-ratio：0.35		10times Time:459ms
+cutoff-ratio：0.45		10times Time:471ms
+cutoff-ratio：0.55		10times Time:580ms
+cutoff-ratio：0.65		10times Time:534ms
+cutoff-ratio：0.75		10times Time:585ms
+cutoff-ratio：0.85		10times Time:589ms
+cutoff-ratio：0.95		10times Time:580ms
+Array size: 2000000		Threads: 6
+cutoff-ratio：0.05		10times Time:1109ms
+cutoff-ratio：0.15		10times Time:1415ms
+cutoff-ratio：0.25		10times Time:1380ms
+cutoff-ratio：0.35		10times Time:967ms
+cutoff-ratio：0.45		10times Time:1034ms
+cutoff-ratio：0.55		10times Time:1198ms
+cutoff-ratio：0.65		10times Time:1118ms
+cutoff-ratio：0.75		10times Time:1161ms
+cutoff-ratio：0.85		10times Time:1232ms
+cutoff-ratio：0.95		10times Time:1204ms
+Array size: 4000000		Threads: 6
+cutoff-ratio：0.05		10times Time:2183ms
+cutoff-ratio：0.15		10times Time:2914ms
+cutoff-ratio：0.25		10times Time:2849ms
+cutoff-ratio：0.35		10times Time:1924ms
+cutoff-ratio：0.45		10times Time:1880ms
+cutoff-ratio：0.55		10times Time:2516ms
+cutoff-ratio：0.65		10times Time:2386ms
+cutoff-ratio：0.75		10times Time:2435ms
+cutoff-ratio：0.85		10times Time:4548ms
+cutoff-ratio：0.95		10times Time:2401ms
+Array size: 8000000		Threads: 6
+cutoff-ratio：0.05		10times Time:4877ms
+cutoff-ratio：0.15		10times Time:6887ms
+cutoff-ratio：0.25		10times Time:5845ms
+cutoff-ratio：0.35		10times Time:3811ms
+cutoff-ratio：0.45		10times Time:4063ms
+cutoff-ratio：0.55		10times Time:7177ms
+cutoff-ratio：0.65		10times Time:4964ms
+cutoff-ratio：0.75		10times Time:4943ms
+cutoff-ratio：0.85		10times Time:4778ms
+cutoff-ratio：0.95		10times Time:4916ms
+Array size: 500000		Threads: 7
+cutoff-ratio：0.05		10times Time:296ms
+cutoff-ratio：0.15		10times Time:351ms
+cutoff-ratio：0.25		10times Time:339ms
+cutoff-ratio：0.35		10times Time:237ms
+cutoff-ratio：0.45		10times Time:232ms
+cutoff-ratio：0.55		10times Time:295ms
+cutoff-ratio：0.65		10times Time:294ms
+cutoff-ratio：0.75		10times Time:309ms
+cutoff-ratio：0.85		10times Time:247ms
+cutoff-ratio：0.95		10times Time:243ms
+Array size: 1000000		Threads: 7
+cutoff-ratio：0.05		10times Time:483ms
+cutoff-ratio：0.15		10times Time:608ms
+cutoff-ratio：0.25		10times Time:598ms
+cutoff-ratio：0.35		10times Time:431ms
+cutoff-ratio：0.45		10times Time:444ms
+cutoff-ratio：0.55		10times Time:530ms
+cutoff-ratio：0.65		10times Time:553ms
+cutoff-ratio：0.75		10times Time:513ms
+cutoff-ratio：0.85		10times Time:497ms
+cutoff-ratio：0.95		10times Time:481ms
+Array size: 2000000		Threads: 7
+cutoff-ratio：0.05		10times Time:1128ms
+cutoff-ratio：0.15		10times Time:1305ms
+cutoff-ratio：0.25		10times Time:1261ms
+cutoff-ratio：0.35		10times Time:855ms
+cutoff-ratio：0.45		10times Time:868ms
+cutoff-ratio：0.55		10times Time:1094ms
+cutoff-ratio：0.65		10times Time:1103ms
+cutoff-ratio：0.75		10times Time:1118ms
+cutoff-ratio：0.85		10times Time:1030ms
+cutoff-ratio：0.95		10times Time:1084ms
+Array size: 4000000		Threads: 7
+cutoff-ratio：0.05		10times Time:2237ms
+cutoff-ratio：0.15		10times Time:3379ms
+cutoff-ratio：0.25		10times Time:3243ms
+cutoff-ratio：0.35		10times Time:2231ms
+cutoff-ratio：0.45		10times Time:2836ms
+cutoff-ratio：0.55		10times Time:2297ms
+cutoff-ratio：0.65		10times Time:2310ms
+cutoff-ratio：0.75		10times Time:2218ms
+cutoff-ratio：0.85		10times Time:2302ms
+cutoff-ratio：0.95		10times Time:2180ms
+Array size: 8000000		Threads: 7
+cutoff-ratio：0.05		10times Time:4211ms
+cutoff-ratio：0.15		10times Time:5615ms
+cutoff-ratio：0.25		10times Time:5582ms
+cutoff-ratio：0.35		10times Time:3687ms
+cutoff-ratio：0.45		10times Time:3768ms
+cutoff-ratio：0.55		10times Time:4922ms
+cutoff-ratio：0.65		10times Time:4754ms
+cutoff-ratio：0.75		10times Time:4684ms
+cutoff-ratio：0.85		10times Time:4862ms
+cutoff-ratio：0.95		10times Time:5025ms
+Array size: 500000		Threads: 8
+cutoff-ratio：0.05		10times Time:258ms
+cutoff-ratio：0.15		10times Time:285ms
+cutoff-ratio：0.25		10times Time:257ms
+cutoff-ratio：0.35		10times Time:213ms
+cutoff-ratio：0.45		10times Time:214ms
+cutoff-ratio：0.55		10times Time:267ms
+cutoff-ratio：0.65		10times Time:256ms
+cutoff-ratio：0.75		10times Time:246ms
+cutoff-ratio：0.85		10times Time:243ms
+cutoff-ratio：0.95		10times Time:252ms
+Array size: 1000000		Threads: 8
+cutoff-ratio：0.05		10times Time:759ms
+cutoff-ratio：0.15		10times Time:570ms
+cutoff-ratio：0.25		10times Time:841ms
+cutoff-ratio：0.35		10times Time:454ms
+cutoff-ratio：0.45		10times Time:465ms
+cutoff-ratio：0.55		10times Time:555ms
+cutoff-ratio：0.65		10times Time:551ms
+cutoff-ratio：0.75		10times Time:535ms
+cutoff-ratio：0.85		10times Time:532ms
+cutoff-ratio：0.95		10times Time:533ms
+Array size: 2000000		Threads: 8
+cutoff-ratio：0.05		10times Time:1064ms
+cutoff-ratio：0.15		10times Time:1095ms
+cutoff-ratio：0.25		10times Time:1105ms
+cutoff-ratio：0.35		10times Time:864ms
+cutoff-ratio：0.45		10times Time:883ms
+cutoff-ratio：0.55		10times Time:1114ms
+cutoff-ratio：0.65		10times Time:1459ms
+cutoff-ratio：0.75		10times Time:1129ms
+cutoff-ratio：0.85		10times Time:1260ms
+cutoff-ratio：0.95		10times Time:1224ms
+Array size: 4000000		Threads: 8
+cutoff-ratio：0.05		10times Time:2118ms
+cutoff-ratio：0.15		10times Time:2209ms
+cutoff-ratio：0.25		10times Time:2290ms
+cutoff-ratio：0.35		10times Time:1813ms
+cutoff-ratio：0.45		10times Time:1829ms
+cutoff-ratio：0.55		10times Time:2255ms
+cutoff-ratio：0.65		10times Time:2339ms
+cutoff-ratio：0.75		10times Time:2274ms
+cutoff-ratio：0.85		10times Time:2416ms
+cutoff-ratio：0.95		10times Time:2371ms
+Array size: 8000000		Threads: 8
+cutoff-ratio：0.05		10times Time:4529ms
+cutoff-ratio：0.15		10times Time:4511ms
+cutoff-ratio：0.25		10times Time:4629ms
+cutoff-ratio：0.35		10times Time:3705ms
+cutoff-ratio：0.45		10times Time:3680ms
+cutoff-ratio：0.55		10times Time:4968ms
+cutoff-ratio：0.65		10times Time:4799ms
+cutoff-ratio：0.75		10times Time:4690ms
+cutoff-ratio：0.85		10times Time:4744ms
+cutoff-ratio：0.95		10times Time:4409ms
+
+Process finished with exit code 0
