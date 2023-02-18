@@ -18,13 +18,13 @@ public class Main {
 
     public static void main(String[] args) {
 //        processArgs(args);
-        runBenchmark();
+        runBenchmark(2_000_000);
     }
 
-    private static void runBenchmark() {
+    private static void runBenchmark(int array_size) {
         System.out.println("Degree of parallelism: " + ForkJoinPool.getCommonPoolParallelism());
         Random random = new Random();
-        int[] array = new int[2000000];
+        int[] array = new int[array_size];
         ArrayList<Long> timeList = new ArrayList<>();
         for (int j = 50; j < 100; j++) {
             ParSort.cutoff = 10000 * (j + 1);
