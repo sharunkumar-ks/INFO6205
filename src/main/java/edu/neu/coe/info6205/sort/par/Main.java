@@ -18,22 +18,22 @@ public class Main {
 
     public static void main(String[] args) {
 //        processArgs(args);
+        System.out.println("Machine has " + Runtime.getRuntime().availableProcessors() + " available processors.");
         for(int threads = 1; threads <= Runtime.getRuntime().availableProcessors(); threads++) {
-            for(int runs = 1, array_size = 2000000; runs <= 5; runs++, array_size *= 2) {
+            for(int runs = 1, array_size = 500_000; runs <= 5; runs++, array_size *= 2) {
                 runBenchmark(array_size, threads);
             }
         }
     }
 
     private static void runBenchmark(int array_size, int thread_count) {
-        System.out.println("Degree of parallelism: " + ForkJoinPool.getCommonPoolParallelism());
+        System.out.println("Array size: " + array_size + "\t\tThreads: " + thread_count);
         Random random = new Random();
         int[] array = new int[array_size];
         ArrayList<Long> timeList = new ArrayList<>();
-        for (int j = 50; j < 100; j++) {
-            ParSort.cutoff = 10000 * (j + 1);
+        for (double cutoff_ratio = 0.05; cutoff_ratio < 1; cutoff_ratio += 0.1) {
+            ParSort.cutoff = (int)(array_size * cutoff_ratio);
             ParSort.pool = new ForkJoinPool(thread_count);
-            // for (int i = 0; i < array.length; i++) array[i] = random.nextInt(10000000);
             long time;
             long startTime = System.currentTimeMillis();
             for (int t = 0; t < 10; t++) {
@@ -44,8 +44,7 @@ public class Main {
             time = (endTime - startTime);
             timeList.add(time);
 
-
-            System.out.println("cutoff：" + (ParSort.cutoff) + "\t\t10times Time:" + time + "ms");
+            System.out.println("cutoff-ratio：" + (cutoff_ratio) + "\t\t10times Time:" + time + "ms");
 
         }
         try {
