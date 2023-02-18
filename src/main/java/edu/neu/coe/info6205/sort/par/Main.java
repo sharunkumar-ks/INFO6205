@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +16,7 @@ import java.util.concurrent.ForkJoinPool;
  * CONSIDER tidy it up a bit.
  */
 public class Main {
+    private static DecimalFormat df = new DecimalFormat("0.00");
 
     public static void main(String[] args) {
 //        processArgs(args);
@@ -44,26 +46,26 @@ public class Main {
             time = (endTime - startTime);
             timeList.add(time);
 
-            System.out.println("cutoff-ratio：" + (cutoff_ratio) + "\t\t10times Time:" + time + "ms");
+            System.out.println("cutoff-ratio：" + (df.format(cutoff_ratio)) + "\t\t10times Time:" + time + "ms");
 
         }
-        try {
-            final String file_name = "./src/result-array-" + array_size + "-thread-" + thread_count + ".csv";
-            FileOutputStream fis = new FileOutputStream(file_name);
-            OutputStreamWriter isr = new OutputStreamWriter(fis);
-            BufferedWriter bw = new BufferedWriter(isr);
-            int j = 0;
-            for (long i : timeList) {
-                String content = (double) 10000 * (j + 1) / 2000000 + "," + (double) i / 10 + "\n";
-                j++;
-                bw.write(content);
-                bw.flush();
-            }
-            bw.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            final String file_name = "./src/result-array-" + array_size + "-thread-" + thread_count + ".csv";
+//            FileOutputStream fis = new FileOutputStream(file_name);
+//            OutputStreamWriter isr = new OutputStreamWriter(fis);
+//            BufferedWriter bw = new BufferedWriter(isr);
+//            int j = 0;
+//            for (long i : timeList) {
+//                String content = (double) 10000 * (j + 1) / 2000000 + "," + (double) i / 10 + "\n";
+//                j++;
+//                bw.write(content);
+//                bw.flush();
+//            }
+//            bw.close();
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private static void processArgs(String[] args) {
