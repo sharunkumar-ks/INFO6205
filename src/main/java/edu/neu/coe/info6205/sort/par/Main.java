@@ -17,7 +17,11 @@ import java.util.concurrent.ForkJoinPool;
 public class Main {
 
     public static void main(String[] args) {
-        processArgs(args);
+//        processArgs(args);
+        runBenchmark();
+    }
+
+    private static void runBenchmark() {
         System.out.println("Degree of parallelism: " + ForkJoinPool.getCommonPoolParallelism());
         Random random = new Random();
         int[] array = new int[2000000];
