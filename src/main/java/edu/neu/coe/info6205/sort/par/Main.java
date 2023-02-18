@@ -18,16 +18,21 @@ public class Main {
 
     public static void main(String[] args) {
 //        processArgs(args);
-        runBenchmark(2_000_000);
+        for(int threads = 1; threads <= Runtime.getRuntime().availableProcessors(); threads++) {
+            for(int runs = 1, array_size = 2000000; runs <= 5; runs++, array_size *= 2) {
+                runBenchmark(array_size, threads);
+            }
+        }
     }
 
-    private static void runBenchmark(int array_size) {
+    private static void runBenchmark(int array_size, int thread_count) {
         System.out.println("Degree of parallelism: " + ForkJoinPool.getCommonPoolParallelism());
         Random random = new Random();
         int[] array = new int[array_size];
         ArrayList<Long> timeList = new ArrayList<>();
         for (int j = 50; j < 100; j++) {
             ParSort.cutoff = 10000 * (j + 1);
+            ParSort.pool = new ForkJoinPool(thread_count);
             // for (int i = 0; i < array.length; i++) array[i] = random.nextInt(10000000);
             long time;
             long startTime = System.currentTimeMillis();
@@ -44,7 +49,8 @@ public class Main {
 
         }
         try {
-            FileOutputStream fis = new FileOutputStream("./src/result.csv");
+            final String file_name = "./src/result-array-" + array_size + "-thread-" + thread_count + ".csv";
+            FileOutputStream fis = new FileOutputStream(file_name);
             OutputStreamWriter isr = new OutputStreamWriter(fis);
             BufferedWriter bw = new BufferedWriter(isr);
             int j = 0;
