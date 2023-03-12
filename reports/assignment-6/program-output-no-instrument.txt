@@ -1,0 +1,66 @@
+2023-03-12 18:27:46 INFO  SortBenchmark - SortBenchmark.main: 1.0.0 (sortbenchmark) with min: 10000 max: 256000 strategy: doubling
+2023-03-12 18:27:46 INFO  Benchmark_Timer - Begin run: intArraysorter with 100 runs
+2023-03-12 18:27:47 INFO  TimeLogger - Raw time per run (mSec):  7.79
+2023-03-12 18:27:47 INFO  TimeLogger - Normalized time per run (n log n):  .86
+2023-03-12 18:27:47 INFO  Benchmark_Timer - Begin run: integerArraysorter with 100 runs
+2023-03-12 18:27:51 INFO  TimeLogger - Raw time per run (mSec):  28.42
+2023-03-12 18:27:51 INFO  TimeLogger - Normalized time per run (n log n):  3.12
+2023-03-12 18:27:51 INFO  SortBenchmark - Beginning String sorts
+2023-03-12 18:27:51 INFO  SortBenchmark - Resource selected: eng-uk_web_2002_10K-sentences.txt
+2023-03-12 18:27:52 INFO  SortBenchmarkHelper - Testing with words: 22,865 from eng-uk_web_2002_10K-sentences.txt
+2023-03-12 18:27:52 INFO  SortBenchmark - Testing pure sorts with 844 runs of sorting 10,000 words
+2023-03-12 18:27:52 INFO  SorterBenchmark - run: sort 10,000 elements using SorterBenchmark on class java.lang.String from 22,865 total elements and 844 runs using sorter: QuickSort basic
+2023-03-12 18:27:52 INFO  Benchmark_Timer - Begin run: Helper for QuickSort basic with 10000 elements with 844 runs
+2023-03-12 18:27:56 INFO  TimeLogger - Raw time per run (mSec):  3.79
+2023-03-12 18:27:56 INFO  TimeLogger - Normalized time per run (n log n):  5.34
+2023-03-12 18:27:56 INFO  SorterBenchmark - run: sort 10,000 elements using SorterBenchmark on class java.lang.String from 22,865 total elements and 844 runs using sorter: Heapsort
+2023-03-12 18:27:56 INFO  Benchmark_Timer - Begin run: Helper for Heapsort with 10000 elements with 844 runs
+2023-03-12 18:28:00 INFO  TimeLogger - Raw time per run (mSec):  4.78
+2023-03-12 18:28:00 INFO  TimeLogger - Normalized time per run (n log n):  6.72
+2023-03-12 18:28:00 INFO  SortBenchmark - Resource selected: eng-uk_web_2002_10K-sentences.txt
+2023-03-12 18:28:00 INFO  SortBenchmarkHelper - Testing with words: 22,865 from eng-uk_web_2002_10K-sentences.txt
+2023-03-12 18:28:00 INFO  SortBenchmark - Testing pure sorts with 389 runs of sorting 20,000 words
+2023-03-12 18:28:00 INFO  SorterBenchmark - run: sort 20,000 elements using SorterBenchmark on class java.lang.String from 22,865 total elements and 389 runs using sorter: QuickSort basic
+2023-03-12 18:28:00 INFO  Benchmark_Timer - Begin run: Helper for QuickSort basic with 20000 elements with 389 runs
+2023-03-12 18:28:04 INFO  TimeLogger - Raw time per run (mSec):  7.75
+2023-03-12 18:28:04 INFO  TimeLogger - Normalized time per run (n log n):  5.03
+2023-03-12 18:28:04 INFO  SorterBenchmark - run: sort 20,000 elements using SorterBenchmark on class java.lang.String from 22,865 total elements and 389 runs using sorter: Heapsort
+2023-03-12 18:28:04 INFO  Benchmark_Timer - Begin run: Helper for Heapsort with 20000 elements with 389 runs
+2023-03-12 18:28:07 INFO  TimeLogger - Raw time per run (mSec):  8.54
+2023-03-12 18:28:07 INFO  TimeLogger - Normalized time per run (n log n):  5.54
+2023-03-12 18:28:07 INFO  SortBenchmark - Resource selected: eng-uk_web_2002_10K-sentences.txt
+2023-03-12 18:28:08 INFO  SortBenchmarkHelper - Testing with words: 22,865 from eng-uk_web_2002_10K-sentences.txt
+2023-03-12 18:28:08 INFO  SortBenchmark - Testing pure sorts with 181 runs of sorting 40,000 words
+2023-03-12 18:28:08 INFO  SorterBenchmark - run: sort 40,000 elements using SorterBenchmark on class java.lang.String from 22,865 total elements and 181 runs using sorter: QuickSort basic
+2023-03-12 18:28:08 INFO  Benchmark_Timer - Begin run: Helper for QuickSort basic with 40000 elements with 181 runs
+2023-03-12 18:28:10 INFO  TimeLogger - Raw time per run (mSec):  14.03
+2023-03-12 18:28:10 INFO  TimeLogger - Normalized time per run (n log n):  4.22
+2023-03-12 18:28:10 INFO  SorterBenchmark - run: sort 40,000 elements using SorterBenchmark on class java.lang.String from 22,865 total elements and 181 runs using sorter: Heapsort
+2023-03-12 18:28:10 INFO  Benchmark_Timer - Begin run: Helper for Heapsort with 40000 elements with 181 runs
+2023-03-12 18:28:14 INFO  TimeLogger - Raw time per run (mSec):  18.80
+2023-03-12 18:28:14 INFO  TimeLogger - Normalized time per run (n log n):  5.66
+2023-03-12 18:28:14 INFO  SortBenchmark - Resource selected: eng-uk_web_2002_100K-sentences.txt
+2023-03-12 18:28:16 INFO  SortBenchmarkHelper - Testing with words: 81,546 from eng-uk_web_2002_100K-sentences.txt
+2023-03-12 18:28:16 INFO  SortBenchmark - Testing pure sorts with 84 runs of sorting 80,000 words
+2023-03-12 18:28:16 INFO  SorterBenchmark - run: sort 80,000 elements using SorterBenchmark on class java.lang.String from 81,546 total elements and 84 runs using sorter: QuickSort basic
+2023-03-12 18:28:16 INFO  Benchmark_Timer - Begin run: Helper for QuickSort basic with 80000 elements with 84 runs
+2023-03-12 18:28:20 INFO  TimeLogger - Raw time per run (mSec):  36.22
+2023-03-12 18:28:20 INFO  TimeLogger - Normalized time per run (n log n):  5.08
+2023-03-12 18:28:20 INFO  SorterBenchmark - run: sort 80,000 elements using SorterBenchmark on class java.lang.String from 81,546 total elements and 84 runs using sorter: Heapsort
+2023-03-12 18:28:20 INFO  Benchmark_Timer - Begin run: Helper for Heapsort with 80000 elements with 84 runs
+2023-03-12 18:28:25 INFO  TimeLogger - Raw time per run (mSec):  55.59
+2023-03-12 18:28:25 INFO  TimeLogger - Normalized time per run (n log n):  7.80
+2023-03-12 18:28:25 INFO  SortBenchmark - Resource selected: eng-uk_web_2002_100K-sentences.txt
+2023-03-12 18:28:26 INFO  SortBenchmarkHelper - Testing with words: 81,546 from eng-uk_web_2002_100K-sentences.txt
+2023-03-12 18:28:26 INFO  SortBenchmark - Testing pure sorts with 39 runs of sorting 160,000 words
+2023-03-12 18:28:26 INFO  SorterBenchmark - run: sort 160,000 elements using SorterBenchmark on class java.lang.String from 81,546 total elements and 39 runs using sorter: QuickSort basic
+2023-03-12 18:28:26 INFO  Benchmark_Timer - Begin run: Helper for QuickSort basic with 160000 elements with 39 runs
+2023-03-12 18:28:31 INFO  TimeLogger - Raw time per run (mSec):  93.43
+2023-03-12 18:28:31 INFO  TimeLogger - Normalized time per run (n log n):  6.14
+2023-03-12 18:28:31 INFO  SorterBenchmark - run: sort 160,000 elements using SorterBenchmark on class java.lang.String from 81,546 total elements and 39 runs using sorter: Heapsort
+2023-03-12 18:28:31 INFO  Benchmark_Timer - Begin run: Helper for Heapsort with 160000 elements with 39 runs
+2023-03-12 18:28:37 INFO  TimeLogger - Raw time per run (mSec):  160.02
+2023-03-12 18:28:37 INFO  TimeLogger - Normalized time per run (n log n):  10.52
+2023-03-12 18:28:37 INFO  SortBenchmark - Beginning LocalDateTime sorts
+
+Process finished with exit code 0
