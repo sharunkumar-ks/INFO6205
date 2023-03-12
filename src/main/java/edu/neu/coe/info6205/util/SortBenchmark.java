@@ -149,6 +149,11 @@ public class SortBenchmark {
             runMergeSortBenchmark(words, nWords, nRuns, true, true);
         }
 
+        if (isConfigBenchmarkStringSorter("mergesortbasic")) {
+            Helper<String> helper = HelperFactory.create("MergeSortBasic", nWords, config);
+            runStringSortBenchmark(words, nWords, nRuns, new MergeSortBasic<>(helper), timeLoggersLinearithmic);
+        }
+
         if (isConfigBenchmarkStringSorter("quicksort3way"))
             runStringSortBenchmark(words, nWords, nRuns, new QuickSort_3way<>(nWords, config), timeLoggersLinearithmic);
 
@@ -373,9 +378,10 @@ public class SortBenchmark {
     }
 
     private void doLeipzigBenchmark(String resource, int nWords, int nRuns) throws FileNotFoundException {
-        benchmarkStringSorters(getWords(resource, SortBenchmark::getLeipzigWords), nWords, nRuns);
         if (isConfigBoolean(Config.HELPER, BaseHelper.INSTRUMENT))
             benchmarkStringSortersInstrumented(getWords(resource, SortBenchmark::getLeipzigWords), nWords, nRuns);
+        else
+            benchmarkStringSorters(getWords(resource, SortBenchmark::getLeipzigWords), nWords, nRuns);
     }
 
     @SuppressWarnings("SameParameterValue")
