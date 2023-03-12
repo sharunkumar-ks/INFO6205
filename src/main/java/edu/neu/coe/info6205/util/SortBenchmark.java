@@ -28,6 +28,7 @@ import static edu.neu.coe.info6205.util.SortBenchmarkHelper.generateRandomLocalD
 import static edu.neu.coe.info6205.util.SortBenchmarkHelper.getWords;
 import static edu.neu.coe.info6205.util.Utilities.formatWhole;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class SortBenchmark {
 
     public SortBenchmark(Config config) {
