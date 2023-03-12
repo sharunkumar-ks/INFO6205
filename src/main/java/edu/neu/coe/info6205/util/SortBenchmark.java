@@ -21,6 +21,7 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 import java.util.regex.Pattern;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static edu.neu.coe.info6205.util.SortBenchmarkHelper.generateRandomLocalDateTimeArray;
@@ -35,11 +36,15 @@ public class SortBenchmark {
 
     public static void main(String[] args) throws IOException {
         Config config = Config.load(SortBenchmark.class);
-        logger.info("SortBenchmark.main: " + config.get("SortBenchmark", "version") + " with word counts: " + Arrays.toString(args));
-        if (args.length == 0) logger.warn("No word counts specified on the command line");
+
+        int minimum = Integer.parseInt(config.get("sortbenchmark", "minimum"));
+        int maximum = Integer.parseInt(config.get("sortbenchmark", "maximum"));
+        String strategy = config.get("sortbenchmark", "strategy");
+
+        logger.info("SortBenchmark.main: " + config.get("sortbenchmark", "version") + " with min: " + minimum + " max: " + maximum + " strategy: " + strategy);
         SortBenchmark benchmark = new SortBenchmark(config);
         benchmark.sortIntegersByShellSort(config.getInt("shellsort", "n", 100000));
-        benchmark.sortStrings(Arrays.stream(args).map(Integer::parseInt));
+        benchmark.sortStrings(IntStream.iterate(minimum, i -> i < maximum, i -> i * 2).boxed());
         benchmark.sortLocalDateTimes(config.getInt("benchmarkdatesorters", "n", 100000), config);
     }
 
@@ -240,6 +245,7 @@ public class SortBenchmark {
 
     private void doLeipzigBenchmarkEnglish(int x) {
         String resource = "eng-uk_web_2002_" + (x < 50000 ? "10K" : x < 200000 ? "100K" : "1M") + "-sentences.txt";
+        logger.info("Resource selected: " + resource);
         try {
             doLeipzigBenchmark(resource, x, Utilities.round(100000000 / minComparisons(x)));
         } catch (FileNotFoundException e) {
