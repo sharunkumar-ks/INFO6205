@@ -3,13 +3,8 @@
  */
 package edu.neu.coe.info6205.util;
 
-import edu.neu.coe.info6205.sort.BaseHelper;
-import edu.neu.coe.info6205.sort.Helper;
-import edu.neu.coe.info6205.sort.SortWithHelper;
-import edu.neu.coe.info6205.sort.elementary.BubbleSort;
-import edu.neu.coe.info6205.sort.elementary.InsertionSort;
-import edu.neu.coe.info6205.sort.elementary.RandomSort;
-import edu.neu.coe.info6205.sort.elementary.ShellSort;
+import edu.neu.coe.info6205.sort.*;
+import edu.neu.coe.info6205.sort.elementary.*;
 import edu.neu.coe.info6205.sort.linearithmic.TimSort;
 import edu.neu.coe.info6205.sort.linearithmic.*;
 
@@ -23,12 +18,14 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 import java.util.regex.Pattern;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static edu.neu.coe.info6205.util.SortBenchmarkHelper.generateRandomLocalDateTimeArray;
 import static edu.neu.coe.info6205.util.SortBenchmarkHelper.getWords;
 import static edu.neu.coe.info6205.util.Utilities.formatWhole;
 
+@SuppressWarnings("SpellCheckingInspection")
 public class SortBenchmark {
 
     public SortBenchmark(Config config) {
@@ -37,12 +34,28 @@ public class SortBenchmark {
 
     public static void main(String[] args) throws IOException {
         Config config = Config.load(SortBenchmark.class);
-        logger.info("SortBenchmark.main: " + config.get("SortBenchmark", "version") + " with word counts: " + Arrays.toString(args));
-        if (args.length == 0) logger.warn("No word counts specified on the command line");
+
+        int minimum = Integer.parseInt(config.get("sortbenchmark", "minimum"));
+        int maximum = Integer.parseInt(config.get("sortbenchmark", "maximum"));
+        String strategy = config.get("sortbenchmark", "strategy");
+
+        logger.info("SortBenchmark.main: " + config.get("sortbenchmark", "version") + " with min: " + minimum + " max: " + maximum + " strategy: " + strategy);
         SortBenchmark benchmark = new SortBenchmark(config);
-        benchmark.sortIntegersByShellSort(config.getInt("shellsort", "n", 100000));
-        benchmark.sortStrings(Arrays.stream(args).map(Integer::parseInt));
-        benchmark.sortLocalDateTimes(config.getInt("benchmarkdatesorters", "n", 100000), config);
+
+        IntStream.iterate(minimum, i -> i < maximum, i -> i * 2).forEach(array_size -> {
+            List<SortWithHelper<Integer>> sorters = getSorters(array_size, config);
+            sorters.forEach(sorter -> benchmark.sortIntegersBySorter(array_size, sorter));
+        });
+    }
+
+    private static ArrayList<SortWithHelper<Integer>> getSorters(final int array_size, Config config){
+        var result = new ArrayList<SortWithHelper<Integer>>();
+
+        result.add(new MergeSortBasic<Integer>(HelperFactory.create("MergeSortBasic", array_size, config)));
+        result.add(new HeapSort<Integer>(HelperFactory.create("HeapSort", array_size, config)));
+        result.add(new QuickSort_DualPivot<Integer>(HelperFactory.create("QuickSort_DualPivot", array_size, config)));
+
+        return result;
     }
 
     public void sortLocalDateTimes(final int n, Config config) throws IOException {
@@ -100,6 +113,11 @@ public class SortBenchmark {
         if (isConfigBenchmarkStringSorter("quicksort"))
             runStringSortBenchmark(words, nWords, nRuns, new QuickSort_Basic<>(nWords, config), timeLoggersLinearithmic);
 
+        if (isConfigBenchmarkStringSorter("heapsort")) {
+            Helper<String> helper = HelperFactory.create("Heapsort", nWords, config);
+            runStringSortBenchmark(words, nWords, nRuns, new HeapSort<>(helper), timeLoggersLinearithmic);
+        }
+
         if (isConfigBenchmarkStringSorter("introsort"))
             runStringSortBenchmark(words, nWords, nRuns, new IntroSort<>(nWords, config), timeLoggersLinearithmic);
 
@@ -142,6 +160,11 @@ public class SortBenchmark {
             runMergeSortBenchmark(words, nWords, nRuns, true, true);
         }
 
+        if (isConfigBenchmarkStringSorter("mergesortbasic")) {
+            Helper<String> helper = HelperFactory.create("MergeSortBasic", nWords, config);
+            runStringSortBenchmark(words, nWords, nRuns, new MergeSortBasic<>(helper), timeLoggersLinearithmic);
+        }
+
         if (isConfigBenchmarkStringSorter("quicksort3way"))
             runStringSortBenchmark(words, nWords, nRuns, new QuickSort_3way<>(nWords, config), timeLoggersLinearithmic);
 
@@ -150,6 +173,11 @@ public class SortBenchmark {
 
         if (isConfigBenchmarkStringSorter("quicksort"))
             runStringSortBenchmark(words, nWords, nRuns, new QuickSort_Basic<>(nWords, config), timeLoggersLinearithmic);
+
+        if (isConfigBenchmarkStringSorter("heapsort")) {
+            Helper<String> helper = HelperFactory.create("Heapsort", nWords, config);
+            runStringSortBenchmark(words, nWords, nRuns, new HeapSort<>(helper), timeLoggersLinearithmic);
+        }
 
         if (isConfigBenchmarkStringSorter("introsort"))
             runStringSortBenchmark(words, nWords, nRuns, new IntroSort<>(nWords, config), timeLoggersLinearithmic);
@@ -201,20 +229,11 @@ public class SortBenchmark {
         for (TimeLogger timeLogger : timeLoggersLinearithmic) timeLogger.log(t2, n);
     }
 
-    // This was added by a Student. Need to figure out what to do with it. What's different from the method with int parameter??
-    private void sortIntegersByShellSort() throws IOException {
-        if (isConfigBenchmarkIntegerSorter("shellsort")) {
-            final Random random = new Random();
-            int N = 1000;
-            for (int j = 0; j < 10; j++) {
-                Integer[] numbers = new Integer[N];
-                for (int i = 0; i < N; i++) numbers[i] = random.nextInt();
-
-                SortWithHelper<Integer> sorter = new ShellSort<>(5);
-                runIntegerSortBenchmark(numbers, N, 1000, sorter, sorter::preProcess, timeLoggersLinearithmic);
-                N = N * 2;
-            }
-        }
+    private void sortIntegersBySorter(final int array_size, SortWithHelper<Integer> sorter) {
+        final Random random = new Random(array_size); // make sure for the given array size, the same random numbers are generated
+        Integer[] numbers = new Integer[array_size];
+        for (int i = 0; i < array_size; i++) numbers[i] = random.nextInt();
+        runIntegerSortBenchmark(numbers, array_size, 10, sorter, sorter::preProcess, timeLoggersLinearithmic);
     }
 
     private void sortStrings(Stream<Integer> wordCounts) {
@@ -232,6 +251,7 @@ public class SortBenchmark {
 
     private void doLeipzigBenchmarkEnglish(int x) {
         String resource = "eng-uk_web_2002_" + (x < 50000 ? "10K" : x < 200000 ? "100K" : "1M") + "-sentences.txt";
+        logger.info("Resource selected: " + resource);
         try {
             doLeipzigBenchmark(resource, x, Utilities.round(100000000 / minComparisons(x)));
         } catch (FileNotFoundException e) {
@@ -251,6 +271,7 @@ public class SortBenchmark {
      */
     static void runStringSortBenchmark(String[] words, int nWords, int nRuns, SortWithHelper<String> sorter, UnaryOperator<String[]> preProcessor, TimeLogger[] timeLoggers) {
         new SorterBenchmark<>(String.class, preProcessor, sorter, words, nRuns, timeLoggers).run(nWords);
+        logger.info(sorter.getHelper().showStats());
         sorter.close();
     }
 
@@ -281,6 +302,7 @@ public class SortBenchmark {
      */
     static void runIntegerSortBenchmark(Integer[] numbers, int n, int nRuns, SortWithHelper<Integer> sorter, UnaryOperator<Integer[]> preProcessor, TimeLogger[] timeLoggers) {
         new SorterBenchmark<>(Integer.class, preProcessor, sorter, numbers, nRuns, timeLoggers).run(n);
+        logger.info(sorter.getHelper().showStats());
         sorter.close();
     }
 
@@ -360,9 +382,10 @@ public class SortBenchmark {
     }
 
     private void doLeipzigBenchmark(String resource, int nWords, int nRuns) throws FileNotFoundException {
-        benchmarkStringSorters(getWords(resource, SortBenchmark::getLeipzigWords), nWords, nRuns);
         if (isConfigBoolean(Config.HELPER, BaseHelper.INSTRUMENT))
             benchmarkStringSortersInstrumented(getWords(resource, SortBenchmark::getLeipzigWords), nWords, nRuns);
+        else
+            benchmarkStringSorters(getWords(resource, SortBenchmark::getLeipzigWords), nWords, nRuns);
     }
 
     @SuppressWarnings("SameParameterValue")
