@@ -3,10 +3,7 @@
  */
 package edu.neu.coe.info6205.util;
 
-import edu.neu.coe.info6205.sort.BaseHelper;
-import edu.neu.coe.info6205.sort.Helper;
-import edu.neu.coe.info6205.sort.HelperFactory;
-import edu.neu.coe.info6205.sort.SortWithHelper;
+import edu.neu.coe.info6205.sort.*;
 import edu.neu.coe.info6205.sort.elementary.*;
 import edu.neu.coe.info6205.sort.linearithmic.TimSort;
 import edu.neu.coe.info6205.sort.linearithmic.*;
@@ -44,9 +41,21 @@ public class SortBenchmark {
 
         logger.info("SortBenchmark.main: " + config.get("sortbenchmark", "version") + " with min: " + minimum + " max: " + maximum + " strategy: " + strategy);
         SortBenchmark benchmark = new SortBenchmark(config);
-        benchmark.sortIntegersByShellSort(config.getInt("shellsort", "n", 100000));
-        benchmark.sortStrings(IntStream.iterate(minimum, i -> i < maximum, i -> i * 2).boxed());
-        benchmark.sortLocalDateTimes(config.getInt("benchmarkdatesorters", "n", 100000), config);
+
+        IntStream.iterate(minimum, i -> i < maximum, i -> i * 2).forEach(array_size -> {
+            List<SortWithHelper<Integer>> sorters = getSorters(array_size, config);
+            sorters.forEach(sorter -> benchmark.sortIntegersBySorter(array_size, sorter));
+        });
+    }
+
+    private static ArrayList<SortWithHelper<Integer>> getSorters(final int array_size, Config config){
+        var result = new ArrayList<SortWithHelper<Integer>>();
+
+        result.add(new MergeSortBasic<Integer>(HelperFactory.create("MergeSortBasic", array_size, config)));
+        result.add(new HeapSort<Integer>(HelperFactory.create("HeapSort", array_size, config)));
+        result.add(new QuickSort_DualPivot<Integer>(HelperFactory.create("QuickSort_DualPivot", array_size, config)));
+
+        return result;
     }
 
     public void sortLocalDateTimes(final int n, Config config) throws IOException {
@@ -220,20 +229,11 @@ public class SortBenchmark {
         for (TimeLogger timeLogger : timeLoggersLinearithmic) timeLogger.log(t2, n);
     }
 
-    // This was added by a Student. Need to figure out what to do with it. What's different from the method with int parameter??
-    private void sortIntegersByShellSort() throws IOException {
-        if (isConfigBenchmarkIntegerSorter("shellsort")) {
-            final Random random = new Random();
-            int N = 1000;
-            for (int j = 0; j < 10; j++) {
-                Integer[] numbers = new Integer[N];
-                for (int i = 0; i < N; i++) numbers[i] = random.nextInt();
-
-                SortWithHelper<Integer> sorter = new ShellSort<>(5);
-                runIntegerSortBenchmark(numbers, N, 1000, sorter, sorter::preProcess, timeLoggersLinearithmic);
-                N = N * 2;
-            }
-        }
+    private void sortIntegersBySorter(final int array_size, SortWithHelper<Integer> sorter) {
+        final Random random = new Random(array_size); // make sure for the given array size, the same random numbers are generated
+        Integer[] numbers = new Integer[array_size];
+        for (int i = 0; i < array_size; i++) numbers[i] = random.nextInt();
+        runIntegerSortBenchmark(numbers, array_size, 10, sorter, sorter::preProcess, timeLoggersLinearithmic);
     }
 
     private void sortStrings(Stream<Integer> wordCounts) {
